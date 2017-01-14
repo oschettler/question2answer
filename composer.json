@@ -1,0 +1,42 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ReichardtIT/q2a-lang-de",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/ReichardtIT/q2a-lang-de.git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "amiyasahu/Donut",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/amiyasahu/Donut.git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "ReichardtIT/q2a-lang-de": "dev-master",
+        "amiyasahu/Donut": "dev-master"
+    },
+    "scripts": {
+        "post-package-install": [
+            "Wundertablet\\Install\\Q2A::postPackageInstall"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Wundertablet\\Install\\": "install/"
+        }
+    }
+}
